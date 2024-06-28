@@ -1,0 +1,28 @@
+@import "../../../_variables";
+@import "../../../_mixins";
+
+.app-conversion {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  top: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+
+  &__inputs {
+    display: flex;
+    gap: 20px;
+    background-color: $applicationBlocksColor;
+    width: 40%;
+    height: 140px;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.conversion-input {
+  margin-top: 20px;
+}
+
+

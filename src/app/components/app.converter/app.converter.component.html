@@ -1,0 +1,26 @@
+<div class="app-conversion">
+  <div class="app-conversion__inputs">
+    <mat-form-field appearance="outline" class="conversion-input">
+      <input #fromCurrencyAmount type="number" matInput [value]="converted_amount_from"  (input)="onInput(Number(fromCurrencyAmount.value), 'from_currency_input')">
+    </mat-form-field>
+    <mat-form-field  appearance="outline" class="conversion-input">
+      <mat-select panelClass="happy" #fromCurrency [(value)]="convert.from_currency" (selectionChange)="onChangeCurrencyFrom(fromCurrency.value)">
+        <mat-option value="UAH">UAH</mat-option>
+        <mat-option value="USD">USD</mat-option>
+        <mat-option value="EUR">EUR</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div class="app-conversion__inputs">
+    <mat-form-field appearance="outline" class="conversion-input">
+      <input #toCurrencyAmount type="number" matInput [value]="converted_amount_to" (input)="onInput(Number(toCurrencyAmount.value), 'to_currency_input')">
+    </mat-form-field>
+    <mat-form-field appearance="outline" class="conversion-input">
+      <mat-select #toCurrency [(value)]="convert.to_currency" (selectionChange)="onChangeCurrencyTo(toCurrency.value)">
+        <mat-option value="UAH">UAH</mat-option>
+        <mat-option value="USD">USD</mat-option>
+        <mat-option value="EUR">EUR</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+</div>

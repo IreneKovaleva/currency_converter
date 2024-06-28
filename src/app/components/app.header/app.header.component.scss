@@ -1,0 +1,37 @@
+@import "../../../_variables";
+@import "../../../_mixins";
+
+.app-header-block {
+  position: relative;
+  top: 20px;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  &__rates {
+    display: flex;
+    flex-flow: row;
+    gap: 20px;
+    p {
+      position: relative;
+      @include text-style($applicationFont, 14x, $applicationFontColor, 400);
+      span {
+        color: $applicationFontBlueColor;
+      }
+    }
+  }
+
+  h3 {
+    position: relative;
+    @include text-style($applicationFont, 30px, $applicationFontColor, 600);
+  }
+  div {
+    position: relative;
+    bottom: 10px;
+    @include text-style($applicationFont, 10x, $applicationFontGrayColor, 400);
+
+  }
+}
+
